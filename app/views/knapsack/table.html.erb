@@ -1,0 +1,83 @@
+<html>
+  
+  <head>
+    <title>Mochila</title>
+    <meta charset="UTF-8" />
+  </head>
+
+  <body>
+
+    <nav class="navbar navbar-default">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="/index">
+            <a class="navbar-brand" href="/index"><b>Problema da Mochila</b></a>
+          </a>
+        </div>
+      </div>
+    </nav>
+
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6 col-md-offset-3">
+          <div class="panel panel-default">
+            <div class="panel-heading">
+              Capacidade da mochila
+            </div>
+            <div class="panel-body">
+              <input type="number" min="1" step="1" id="capacity" class="form-control" />
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-md-offset-3">
+          <div class="panel panel-default">
+            <div class="panel-heading">Pesos e valores</div>
+            <table class="table" id="ktable">
+              <th>
+                <tr>
+                  <th>Peso</th>
+                  <th>Valor</th>
+                </tr>
+              </th>
+              <tr>
+                <td><input type="number" min="1" step="1" class="form-control" /></td>
+                <td><input type="number" min="1" step="1" class="form-control" /></td>
+              </tr>
+              <tr>
+                <td><input type="number" min="1" step="1" class="form-control" /></td>
+                <td><input type="number" min="1" step="1" class="form-control" /></td>
+              </tr>
+              <tr>
+                <td><input type="number" min="1" step="1" class="form-control" /></td>
+                <td><input type="number" min="1" step="1" class="form-control" /></td>
+              </tr>
+              <tr>
+                <td><button type="button" id="adic" class="btn btn-block btn-primary">Adicionar item</button></td>
+                <td><button type="button" id="rm" class="btn btn-block btn-danger">Remover item</button></td>
+            </table>
+          </div>
+              <button type="button" id="calc" class="btn btn-block btn-success">Calcular</button>
+              <br>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-12">
+      <div class="panel panel-default">
+        <div class="panel-heading">
+          Resultado
+        </div>
+        <div class="panel-body">
+          <div id="result">
+            <div class="alert alert-info">
+              Defina a capacidade da mochila e defina os itens.
+            </div>
+          </div>  
+        </div>
+      </div>
+    </div>
+
+  </body>
+
+</html>

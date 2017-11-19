@@ -1,0 +1,17 @@
+<b>Peso do(s) item(ns) que poderão ser colocados na mochila:</b>
+<div class="table-responsive">
+  <% @result.each do |row| %>             
+        <% row.each_with_index do |el, idx| %>
+          <span><%= el.first %> </span>
+        <% end %>
+    <% end %>
+</div>
+<br>
+<b>Dos que não poderão:</b>
+<div class="table-responsive">
+  <% @notResult.each do |row| %>             
+        <% row.each_with_index do |el, idx| %>
+          <span><%= el.first %></span>
+        <% end %>
+    <% end %>
+</div>
