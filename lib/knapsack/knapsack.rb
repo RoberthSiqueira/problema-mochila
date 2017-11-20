@@ -29,12 +29,11 @@ module Knapsack
         matrix << Array.new(capacity.to_i+1, 0)
       end
 
-      fill_table(matrix)
+      fill_table(matrix, weights)
     end
 
     # Verifica os itens que entrarão na mochila
-    def self.fill_table(matrix)
-      countItem = 0
+    def self.fill_table(matrix, weights)
       matrix.each_with_index do |line, weight|
         line.each_with_index do |item, idx|
           
@@ -62,35 +61,40 @@ module Knapsack
         end
       end
 
-      # Exibe os itens
+      # Exibe os itens 
       matrix.each do |line|
         p line
       end
 
-      find_itens(matrix)
+      find_itens(matrix, weights)
     end
 
-    def self.find_itens(matrix)
+    def self.find_itens(matrix, weights)
       i = matrix.size-1
       j = matrix.last.size-1
 
       result = []
-      notResult = []
+      goIn = []
+      notEnter = []
 
       begin 
         if matrix[i][j] != matrix[i-1][j]
-          result << { i.to_s => @wc_hsh[i.to_s] }
+          result << i.to_s
           j -= i
           i -= 1
         else
-          # Item não entrará na mochila
-          notResult << { i.to_s => @wc_hsh[i.to_s] }
           i -= 1
         end
       end while i > 0
 
-      return result, notResult, matrix
+      weights.each do |item|
+        if result.include?(item)
+          goIn << (weights.index(item) + 1)
+        else 
+          notEnter << (weights.index(item) + 1)
+        end
+      end
+      return goIn, notEnter, matrix
     end
-
   end
 end

@@ -40,6 +40,8 @@ GEM
       tzinfo (~> 1.1)
     arel (8.0.0)
     builder (3.2.3)
+    byebug (9.1.0)
+    coderay (1.1.2)
     coffee-rails (4.2.2)
       coffee-script (>= 2.2.0)
       railties (>= 4.0.0)
@@ -77,6 +79,12 @@ GEM
     nio4r (2.1.0)
     nokogiri (1.8.1)
       mini_portile2 (~> 2.3.0)
+    pry (0.11.3)
+      coderay (~> 1.1.0)
+      method_source (~> 0.9.0)
+    pry-byebug (3.5.0)
+      byebug (~> 9.1)
+      pry (~> 0.10)
     rack (2.0.3)
     rack-test (0.7.0)
       rack (>= 1.0, < 3)
@@ -152,12 +160,16 @@ DEPENDENCIES
   coffee-rails
   jbuilder (~> 2.0)
   jquery-rails
+  pry-byebug
   rails
   sass-rails
   sdoc (~> 0.4.0)
   spring
   turbolinks
   uglifier
+
+RUBY VERSION
+   ruby 2.4.0p0
 
 BUNDLED WITH
    1.16.0.pre.3

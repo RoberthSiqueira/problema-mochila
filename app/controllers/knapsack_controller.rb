@@ -7,8 +7,8 @@ class KnapsackController < ApplicationController
   end
 
   def calc
-    @result, @notResult, @matrix = Knapsack::Knapsack.knapsack_table(params[:capacity], params[:weights], params[:values])
-
+    @goIn, @notEnter, @matrix = Knapsack::Knapsack.knapsack_table(params[:capacity], params[:weights], params[:values])
+    
     render layout: false
   end
 
