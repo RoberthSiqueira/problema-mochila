@@ -10,8 +10,8 @@
 <b>Dos que não poderão:</b>
 <div class="table-responsive">
   <% @notResult.each do |row| %>             
-        <% row.each_with_index do |el, idx| %>
-          <span><%= el.first %></span>
-        <% end %>
+    <% row.each_with_index do |el, idx| %>
+      <span><%= el.first %></span>
     <% end %>
+  <% end %>
 </div>
